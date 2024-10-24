@@ -1,0 +1,84 @@
+.rowed {
+    max-width: $grid-width;
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
+    
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+    @include clearfix;
+
+    [class^="col-"] {
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
+        }
+    }
+
+    .col-1-of-12 {
+        width: calc((100% - 11 * #{$gutter-horizontal}) / 12);
+    }
+
+    .col-2-of-12 {
+        width: calc(2 * ((100% - 11 * #{$gutter-horizontal}) / 12) + #{$gutter-horizontal});
+    }
+
+    .col-3-of-12 {
+        width: calc(3 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 2 * #{$gutter-horizontal});
+    }
+
+    .col-4-of-12 {
+        width: calc(4 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 3 * #{$gutter-horizontal});
+    }
+
+    .col-5-of-12 {
+        width: calc(5 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 4 * #{$gutter-horizontal});
+    }
+
+    .col-6-of-12 {
+        width: calc(6 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 5 * #{$gutter-horizontal});
+    }
+
+    .col-7-of-12 {
+        width: calc(7 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 6 * #{$gutter-horizontal});
+    }
+
+    .col-8-of-12 {
+        width: calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
+    }
+
+    .col-9-of-12 {
+        width: calc(9 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 8 * #{$gutter-horizontal});
+    }
+
+    .col-10-of-12 {
+        width: calc(10 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 9 * #{$gutter-horizontal});
+    }
+
+    .col-11-of-12 {
+        width: calc(11 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 10 * #{$gutter-horizontal});
+    }
+
+    .col-12-of-12 {
+        width: calc(100% - 11 * #{$gutter-horizontal}); // O simplemente 100%
+    }
+
+}
